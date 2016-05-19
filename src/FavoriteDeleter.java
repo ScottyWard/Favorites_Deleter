@@ -24,7 +24,7 @@ public class FavoriteDeleter {
         List<Status> tweets = new ArrayList();
         
         try {
-            while (twitter.getFavorites().size() > 0 && likesRemoved < 500) {
+            while (twitter.getFavorites().size() > 0) {
                 Paging p = new Paging(1, 200);
                 System.out.println(tweets.size());
                 tweets.addAll(twitter.getFavorites(p));
